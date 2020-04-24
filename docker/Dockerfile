@@ -52,7 +52,7 @@ RUN set -x \
           && apt-get install tzdata \ 
           && apt-get clean \
           && apt-get autoclean \
-          && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*  \
+          && rm -rf /var/lib/apt/lists/* 
 
 # Create a user for the zookeeper process and configure file system ownership 
 # for nessecary directories and symlink the distribution as a user executable
