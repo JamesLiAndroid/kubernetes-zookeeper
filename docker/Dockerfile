@@ -5,7 +5,7 @@ ZK_DATA_LOG_DIR=/var/lib/zookeeper/log \
 ZK_LOG_DIR=/var/log/zookeeper \
 JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
-ARG GPG_KEY=C823E3E5B12AF29C67F81976F5CECB3CB5E9BD2D
+ARG GPG_KEY=3F7A1D16FA4217B1DC75E1C9FFE35B7F15DFA1BA
 ARG ZK_DIST=zookeeper-3.4.14
 RUN set -x \
     && apt-get update \
