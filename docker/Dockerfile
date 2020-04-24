@@ -8,6 +8,7 @@ JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ARG GPG_KEY=3F7A1D16FA4217B1DC75E1C9FFE35B7F15DFA1BA
 ARG ZK_DIST=zookeeper-3.4.14
 RUN set -x \
+    && sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list \
     && apt-get update \
     && apt-get install -y openjdk-8-jre-headless wget netcat-openbsd \
 	&& wget -q "http://www.apache.org/dist/zookeeper/$ZK_DIST/$ZK_DIST.tar.gz" \
