@@ -45,7 +45,8 @@ COPY ./scripts /opt/zookeeper/bin/
 # set the right tzdata
 # apt-get install tzdata,这一步要在上一步执行完之后
 ENV TZ=Asia/Shanghai
-RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list \
+RUN set -x \
+          && sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list \
           && apt-get update \
           && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
           && apt-get install tzdata \ 
