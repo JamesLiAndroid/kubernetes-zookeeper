@@ -39,7 +39,7 @@ RUN set -x \
 	&& rm -rf /var/lib/apt/lists/*
 
 #Copy configuration generator script to bin
-COPY scripts /opt/zookeeper/bin/
+COPY ./scripts /opt/zookeeper/bin/
 
 # set the right tzdata
 # apt-get install tzdata,这一步要在上一步执行完之后
